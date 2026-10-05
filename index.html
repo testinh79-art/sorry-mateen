@@ -107,20 +107,6 @@
   /* ---------- bro extras ---------- */
   .badge-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
   .badge{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;padding:8px 15px;border-radius:100px;border:1px solid rgba(255,179,207,.35);background:rgba(255,255,255,.04);color:#e6dcef}
-  .legend{padding:2vh 6vw 6vh;max-width:900px;margin:0 auto;text-align:center}
-  .legend h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,5.6vw,2.7rem);margin-bottom:12px}
-  .legend h2 em{font-style:italic;color:var(--rose-soft)}
-  .legend .sub{color:var(--muted);font-size:.9rem;margin-bottom:36px;font-weight:300}
-  .pacts{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));text-align:left}
-  .pact{display:flex;gap:14px;align-items:flex-start;padding:20px 20px;border-radius:16px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(12px);transition:.45s cubic-bezier(.2,.8,.2,1)}
-  .pact:hover{transform:translateY(-6px);border-color:rgba(255,179,207,.42);box-shadow:0 24px 50px -30px rgba(255,79,139,.85)}
-  .pact .tick{flex:0 0 30px;height:30px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(140deg,rgba(255,111,165,.28),rgba(160,107,255,.2));border:1px solid rgba(255,179,207,.4);font-size:.8rem}
-  .pact b{display:block;font-family:var(--serif);font-size:1.12rem;font-weight:600;color:#fff;margin-bottom:4px}
-  .pact span{font-size:.9rem;color:var(--muted);font-weight:300}
-  .counters{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px}
-  .counter{min-width:130px;padding:16px 18px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.035)}
-  .counter b{display:block;font-family:var(--serif);font-size:1.7rem;color:var(--rose-soft);line-height:1}
-  .counter span{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
   .mood{padding:2vh 6vw 5vh;max-width:860px;margin:0 auto;text-align:center}
   .mood h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,5.2vw,2.5rem);margin-bottom:8px}
   .mood .sub{color:var(--muted);font-size:.88rem;margin-bottom:28px;font-weight:300}
@@ -143,6 +129,42 @@
   .vip h2 em{font-style:italic;color:var(--rose-soft)}
   .vip p{color:var(--muted);font-size:.92rem;font-weight:300;max-width:44ch;margin:0 auto}
   .vip .bro-line{margin-top:26px;font-family:var(--script);font-size:clamp(1.8rem,6vw,2.6rem);background:linear-gradient(100deg,#fff,var(--rose-soft) 45%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  /* ---------- bhai zone ---------- */
+  .bhai{padding:4vh 6vw 6vh;max-width:1000px;margin:0 auto;text-align:center}
+  .bhai h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.9rem,6vw,2.9rem);margin-bottom:10px}
+  .bhai h2 em{font-style:italic;color:var(--rose-soft)}
+  .bhai .sub{color:var(--muted);font-size:.9rem;margin-bottom:38px;font-weight:300}
+  .bro-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));text-align:left}
+  .bro-card{padding:26px 24px;border-radius:18px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(14px);transition:.5s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden}
+  .bro-card::after{content:'';position:absolute;inset:0;background:linear-gradient(140deg,rgba(255,111,165,.16),transparent 55%);opacity:0;transition:.5s}
+  .bro-card:hover{transform:translateY(-8px);border-color:rgba(255,179,207,.45);box-shadow:0 30px 60px -34px rgba(255,79,139,.85)}
+  .bro-card:hover::after{opacity:1}
+  .bro-card .ic{font-size:1.5rem;display:block;margin-bottom:12px}
+  .bro-card b{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:600;color:#fff;margin-bottom:8px}
+  .bro-card span{font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.65}
+  /* playlist */
+  .playlist{padding:2vh 6vw 5vh;max-width:640px;margin:0 auto;text-align:center}
+  .playlist h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,5vw,2.3rem);margin-bottom:8px}
+  .playlist .sub{color:var(--muted);font-size:.86rem;margin-bottom:26px;font-weight:300}
+  .track{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.035);margin-bottom:10px;cursor:pointer;transition:.4s cubic-bezier(.2,.8,.2,1);text-align:left}
+  .track:hover{border-color:rgba(255,179,207,.5);background:rgba(255,111,165,.10);transform:translateX(6px)}
+  .track .play{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(140deg,rgba(255,111,165,.3),rgba(160,107,255,.22));border:1px solid rgba(255,179,207,.4);font-size:.72rem}
+  .track b{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:#fff;display:block}
+  .track span{font-size:.76rem;color:var(--muted)}
+  .track.playing{border-color:rgba(255,179,207,.75);background:rgba(255,111,165,.16)}
+  /* fight meter */
+  .meter{padding:2vh 6vw 5vh;max-width:600px;margin:0 auto;text-align:center}
+  .meter h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,5vw,2.3rem);margin-bottom:8px}
+  .meter .sub{color:var(--muted);font-size:.86rem;margin-bottom:24px;font-weight:300}
+  .meter-bar{height:14px;border-radius:100px;background:rgba(255,255,255,.07);overflow:hidden;border:1px solid var(--line)}
+  .meter-fill{height:100%;width:0;border-radius:100px;background:linear-gradient(90deg,var(--rose),var(--violet));transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+  .meter-txt{margin-top:16px;font-family:var(--serif);font-size:1.1rem;color:var(--rose-soft);font-style:italic}
+  /* roast */
+  .roast{padding:2vh 6vw 5vh;text-align:center}
+  .roast-btn{padding:15px 30px;border-radius:100px;border:1px solid rgba(255,179,207,.45);background:linear-gradient(100deg,rgba(255,111,165,.2),rgba(160,107,255,.16));color:#fff;font-family:var(--sans);font-size:.9rem;cursor:pointer;transition:.4s cubic-bezier(.2,.8,.2,1)}
+  .roast-btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 20px 44px -24px rgba(255,79,139,.95)}
+  .roast-out{margin-top:24px;min-height:64px;font-family:var(--serif);font-size:clamp(1.05rem,3.4vw,1.32rem);font-style:italic;color:#fff;opacity:0;transition:opacity .5s}
+  .roast-out.on{opacity:1}
   @media (max-width:600px){
     .hero{min-height:auto;justify-content:flex-start;padding:30px 6vw 14px}
     .crest{margin-bottom:30px}
@@ -240,19 +262,40 @@
     </div>
   </section>
 
-  <section class="legend">
-    <h2 class="reveal">Ye <em>wada</em> hai, bhai</h2>
-    <p class="sub reveal">Lafz kam, niyat saaf. Ye sab pakka.</p>
-    <div class="pacts reveal">
-      <div class="pact"><span class="tick">&#10003;</span><div><b>No more zid</b><span>Jo galat ho, main pehle maanunga. Ego se bara hum hai.</span></div></div>
-      <div class="pact"><span class="tick">&#10003;</span><div><b>Seedhi baat</b><span>Na drama, na chhupana. Jo dil mein hai, wahi bolunga.</span></div></div>
-      <div class="pact"><span class="tick">&#10003;</span><div><b>Tera naam aage</b><span>Jahan zaroorat ho, main pehle tera naam lunga.</span></div></div>
-      <div class="pact"><span class="tick">&#10003;</span><div><b>Hamesha pick up</b><span>Raat ho ya subah, tu call kare to main uthunga.</span></div></div>
+  <section class="bhai">
+    <h2 class="reveal">Ye sirf dosti <em>nahi</em> hai</h2>
+    <p class="sub reveal">Ye bhai wali cheez hai. Samajh ja.</p>
+    <div class="bro-grid reveal">
+      <div class="bro-card"><span class="ic">&#128170;</span><b>Kandha</b><span>Jab tu thak jaye, main khada rahunga. Bina sawal, bina shart.</span></div>
+      <div class="bro-card"><span class="ic">&#128274;</span><b>Raaz</b><span>Teri baat mere se bahar nahi jayegi. Qabar tak.</span></div>
+      <div class="bro-card"><span class="ic">&#128293;</span><b>Larai</b><span>Hum lad sakte hai, par kabhi alag nahi ho sakte.</span></div>
+      <div class="bro-card"><span class="ic">&#129309;</span><b>Wada</b><span>Jab duniya khilaf ho, main tera pehla naam lunga.</span></div>
     </div>
-    <div class="counters reveal">
-      <div class="counter"><b id="c1">0</b><span>din dost</span></div>
-      <div class="counter"><b id="c2">0</b><span>lafz maafi</span></div>
-      <div class="counter"><b id="c3">&#8734;</b><span>izzat</span></div>
+  </section>
+
+  <section class="meter">
+    <h2 class="reveal">Humara fight meter</h2>
+    <p class="sub reveal">Kitni der gussa rehte hai hum</p>
+    <div class="meter-bar"><div class="meter-fill" id="meterfill"></div></div>
+    <p class="meter-txt reveal" id="metertxt">Hisab lagaya ja raha hai...</p>
+  </section>
+
+  <section class="playlist">
+    <h2 class="reveal">Bhai wali playlist</h2>
+    <p class="sub reveal">Ye gaane sunte ho to yaad aata hai tu</p>
+    <div class="reveal">
+      <div class="track" data-song="1"><span class="play">&#9654;</span><div><b>Yaaron Dosti</b><span>wo purane din</span></div></div>
+      <div class="track" data-song="2"><span class="play">&#9654;</span><div><b>Tera Yaar Hoon Main</b><span>seedha dil se</span></div></div>
+      <div class="track" data-song="3"><span class="play">&#9654;</span><div><b>Kabira</b><span>raat ki baatein</span></div></div>
+      <div class="track" data-song="4"><span class="play">&#9654;</span><div><b>Bhai Bhai</b><span>hum dono ka anthem</span></div></div>
+    </div>
+    <p class="meter-txt reveal" id="songmsg" style="margin-top:22px"></p>
+  </section>
+
+  <section class="roast">
+    <div class="reveal">
+      <button class="roast-btn" id="roastbtn">Ek line sun le bhai &#128514;</button>
+      <p class="roast-out" id="roastout"></p>
     </div>
   </section>
 
@@ -342,24 +385,6 @@
     setTimeout(function(){ fm.textContent = msgs[mi % msgs.length]; mi++; fm.style.opacity = 1; }, 250);
   });
 
-  /* counters */
-  function runCounters(){
-    var c1 = document.getElementById('c1'), c2 = document.getElementById('c2');
-    if (!c1 || c1.dataset.done) return;
-    c1.dataset.done = 1;
-    var t1 = 2000, t2 = 2, s1 = Date.now(), s2 = Date.now();
-    (function up1(){
-      var p = Math.min((Date.now()-s1)/1600, 1);
-      c1.textContent = Math.floor(2000 * (1-Math.pow(1-p,3))).toLocaleString();
-      if (p < 1) requestAnimationFrame(up1);
-    })();
-    (function up2(){
-      var p = Math.min((Date.now()-s2)/1200, 1);
-      c2.textContent = Math.floor(9 * (1-Math.pow(1-p,3)));
-      if (p < 1) requestAnimationFrame(up2);
-    })();
-  }
-
   /* mood buttons */
   var moods = {
     gussa: 'Gussa hai? Bilkul haq hai tera. Main sun raha hon, kuch mat chhupa.',
@@ -383,14 +408,50 @@
     document.getElementById('note').classList.toggle('on');
   });
 
-  /* counters trigger */
-  var legendEl = document.querySelector('.legend');
-  if (legendEl && 'IntersectionObserver' in window){
-    var io2 = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if (e.isIntersecting){ runCounters(); io2.disconnect(); } });
-    }, {threshold:.3});
-    io2.observe(legendEl);
-  } else { runCounters(); }
+  /* fight meter */
+  var mf = document.getElementById('meterfill'), mt = document.getElementById('metertxt');
+  if (mf){
+    var mo = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        mo.disconnect();
+        setTimeout(function(){
+          mf.style.width = '4%';
+          mt.textContent = '4% — baqi 96% sirf dosti hai.';
+        }, 400);
+      });
+    }, {threshold:.4});
+    mo.observe(mf.parentElement.parentElement);
+  }
+
+  /* playlist */
+  var songMsgs = {
+    '1': 'Yaad hai wo din? Kuch nahi badla bhai.',
+    '2': 'Haan, main tera yaar hoon — bas.'
+  };
+  document.querySelectorAll('.track').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.track').forEach(function(x){ x.classList.remove('playing'); });
+      t.classList.add('playing');
+      var sm = document.getElementById('songmsg');
+      sm.textContent = songMsgs[t.dataset.song] || 'Ye gaana sunte hi tera chehra yaad aata hai.';
+    });
+  });
+
+  /* roast */
+  var roasts = [
+    'Bhai tu wo banda hai jise main 3 baje bhi utha sakta hon aur tu gaali bhi nahi dega.',
+    'Humari dosti ka proof: main teri shakal dekh ke bhi hans deta hon.',
+    'Tere jaisa dost milna kismat hai. Ya phir meri koi galti hai jo tu abhi tak hai.',
+    'Tu mera best friend hai. Baqi sab bas log hai jo mere bare mein jante hai.',
+    'Hum dono milke ek complete insaan bante hai. Alag alag to adhure hai.'
+  ];
+  var ri = 0, ro = document.getElementById('roastout');
+  document.getElementById('roastbtn').addEventListener('click', function(e){
+    e.stopPropagation();
+    ro.style.opacity = 0;
+    setTimeout(function(){ ro.textContent = roasts[ri % roasts.length]; ri++; ro.classList.add('on'); ro.style.opacity = 1; }, 200);
+  });
 
   var petalBox = document.getElementById('petals');
   var glyphs = ['\uD83E\uDD0D','\u2728','\uD83C\uDF38','\uD83D\uDC9B','\uD83E\uDD0D'];
