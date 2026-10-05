@@ -203,6 +203,31 @@
   .pinky-btn:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 24px 50px -26px rgba(255,79,139,.95)}
   .pinky-out{margin-top:22px;font-family:var(--script);font-size:clamp(1.6rem,5.5vw,2.3rem);background:linear-gradient(100deg,#fff,var(--rose-soft) 50%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;transition:.6s}
   .pinky-out.on{opacity:1}
+  /* ---------- bonus zone ---------- */
+  .secret{padding:3vh 6vw 5vh;max-width:520px;margin:0 auto;text-align:center}
+  .secret h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,5vw,2.3rem);margin-bottom:8px}
+  .secret .sub{color:var(--muted);font-size:.86rem;margin-bottom:24px;font-weight:300}
+  .code-row{display:flex;gap:10px;justify-content:center}
+  .code-in{flex:1;max-width:220px;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#fff;font-family:var(--sans);font-size:16px;text-align:center;letter-spacing:.2em;text-transform:uppercase}
+  .code-in::placeholder{color:rgba(167,155,184,.55);letter-spacing:.14em}
+  .code-btn{padding:14px 22px;border-radius:12px;border:1px solid rgba(255,179,207,.5);background:linear-gradient(100deg,rgba(255,111,165,.22),rgba(160,107,255,.18));color:#fff;font-family:var(--sans);font-size:.88rem;cursor:pointer;transition:.35s}
+  .code-btn:hover{transform:translateY(-3px)}
+  .code-out{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:clamp(1.02rem,3.3vw,1.25rem);color:var(--rose-soft);min-height:30px;opacity:0;transition:.5s}
+  .code-out.on{opacity:1}
+  .shayari{padding:3vh 6vw 5vh;max-width:640px;margin:0 auto;text-align:center}
+  .shayari h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,5.4vw,2.5rem);margin-bottom:10px}
+  .shayari h2 em{font-style:italic;color:var(--rose-soft)}
+  .verse{font-family:var(--serif);font-size:clamp(1.08rem,3.6vw,1.35rem);font-style:italic;color:#e8e1f0;line-height:2;margin-top:20px;min-height:110px;transition:opacity .5s}
+  .verse .l{display:block;opacity:0;transform:translateY(10px);animation:vin .7s forwards}
+  @keyframes vin{to{opacity:1;transform:none}}
+  .next-btn{margin-top:22px;padding:13px 26px;border-radius:100px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#e6dcef;font-family:var(--sans);font-size:.86rem;cursor:pointer;transition:.35s}
+  .next-btn:hover{border-color:rgba(255,179,207,.55);color:#fff;background:rgba(255,111,165,.12)}
+  .badges2{padding:3vh 6vw 6vh;max-width:760px;margin:0 auto;text-align:center}
+  .badges2 h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,5.4vw,2.5rem);margin-bottom:10px}
+  .badges2 .sub{color:var(--muted);font-size:.86rem;margin-bottom:26px;font-weight:300}
+  .badge-wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .bb{padding:12px 20px;border-radius:100px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-size:.78rem;letter-spacing:.1em;color:#e6dcef;transition:.4s cubic-bezier(.2,.8,.2,1)}
+  .bb:hover{transform:translateY(-4px) scale(1.05);border-color:rgba(255,179,207,.6);background:rgba(255,111,165,.14);color:#fff;box-shadow:0 16px 34px -20px rgba(255,79,139,.95)}
   @media (max-width:600px){
     .hero{min-height:auto;justify-content:flex-start;padding:30px 6vw 14px}
     .crest{margin-bottom:30px}
@@ -401,6 +426,37 @@
     <p class="star-msg" id="starm"></p>
   </section>
 
+  <section class="secret">
+    <h2 class="reveal">Secret code</h2>
+    <p class="sub reveal">Sahi code daalo, chhupi baat khulegi</p>
+    <div class="code-row reveal">
+      <input class="code-in" id="codein" placeholder="code likho" autocomplete="off" />
+      <button class="code-btn" id="codebtn">Kholo</button>
+    </div>
+    <p class="code-out" id="codeout"></p>
+  </section>
+
+  <section class="shayari">
+    <h2 class="reveal">Dosti wali <em>shayari</em></h2>
+    <div class="verse reveal" id="verse"></div>
+    <button class="next-btn" id="nextverse">Agli shayari</button>
+  </section>
+
+  <section class="badges2">
+    <h2 class="reveal">Tumhare <em>badges</em></h2>
+    <p class="sub reveal">Ye sirf tumhare liye hai</p>
+    <div class="badge-wrap reveal">
+      <span class="bb">&#128293; Day One Legend</span>
+      <span class="bb">&#129309; Ride or Die</span>
+      <span class="bb">&#127942; Best Dost Award</span>
+      <span class="bb">&#128274; Secret Keeper</span>
+      <span class="bb">&#9889; Instant Reply</span>
+      <span class="bb">&#128149; Dil Se Dil Tak</span>
+      <span class="bb">&#128081; King of Loyalty</span>
+      <span class="bb">&#127775; Once In A Lifetime</span>
+    </div>
+  </section>
+
   <section class="mood">
     <h2 class="reveal">Aaj mood kaisa hai?</h2>
     <p class="sub reveal">Tap karo, main jawab de dunga.</p>
@@ -572,6 +628,39 @@
     document.getElementById('pinkyout').classList.add('on');
     for (var i=0;i<12;i++){ setTimeout(function(){ tapHeart(e.clientX + (Math.random()-.5)*220, e.clientY + (Math.random()-.5)*120); }, i*80); }
   });
+
+  /* secret code */
+  var codes = { 'MATEEN': 'Tu meri zindagi ka sab se acha hissa hai bhai. Ye code sirf teri khatir tha.', 'BHAI': 'Jo bhi ho, main tera hi rahunga. Ye wada pakka hai.', 'SORRY': 'Maafi ka code? Maaf to kab ka kar diya. Ab bas baat kar le mujhse.' };
+  document.getElementById('codebtn').addEventListener('click', function(e){
+    e.stopPropagation();
+    var v = (document.getElementById('codein').value || '').trim().toUpperCase();
+    var out = document.getElementById('codeout');
+    out.textContent = codes[v] || 'Ye code sahi nahi hai. Hint: mera naam, ya "BHAI", ya "SORRY".';
+    out.classList.add('on');
+  });
+
+  /* shayari */
+  var verses = [
+    ['Dosti wo nahi jo har waqt saath ho,', 'Dosti wo hai jo door hote hue bhi dil mein rahe.'],
+    ['Hum ne jo saath jhela hai,', 'Wo kisi kahani mein nahi likha.'],
+    ['Tu mera dost nahi, mera hissa hai,', 'Tere baghair main adhoora sa lagta hon.'],
+    ['Larai ho jaye to kya hua,', 'Dil se to hum abhi bhi wahi hai.'],
+    ['Waqt badalta hai, log badalte hai,', 'Par tera bhai kabhi nahi badlega.']
+  ];
+  var vi = 0;
+  function showVerse(){
+    var v = verses[vi % verses.length]; vi++;
+    var box = document.getElementById('verse');
+    box.innerHTML = '';
+    v.forEach(function(line, i){
+      var sp = document.createElement('span');
+      sp.className = 'l'; sp.textContent = line;
+      sp.style.animationDelay = (i * 0.35) + 's';
+      box.appendChild(sp);
+    });
+  }
+  document.getElementById('nextverse').addEventListener('click', function(e){ e.stopPropagation(); showVerse(); });
+  showVerse();
 
   var petalBox = document.getElementById('petals');
   var glyphs = ['\uD83E\uDD0D','\u2728','\uD83C\uDF38','\uD83D\uDC9B','\uD83E\uDD0D'];
