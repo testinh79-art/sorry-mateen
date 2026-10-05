@@ -142,16 +142,18 @@
   .bro-card .ic{font-size:1.5rem;display:block;margin-bottom:12px}
   .bro-card b{display:block;font-family:var(--serif);font-size:1.25rem;font-weight:600;color:#fff;margin-bottom:8px}
   .bro-card span{font-size:.9rem;color:var(--muted);font-weight:300;line-height:1.65}
-  /* playlist */
-  .playlist{padding:2vh 6vw 5vh;max-width:640px;margin:0 auto;text-align:center}
-  .playlist h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,5vw,2.3rem);margin-bottom:8px}
-  .playlist .sub{color:var(--muted);font-size:.86rem;margin-bottom:26px;font-weight:300}
-  .track{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.035);margin-bottom:10px;cursor:pointer;transition:.4s cubic-bezier(.2,.8,.2,1);text-align:left}
-  .track:hover{border-color:rgba(255,179,207,.5);background:rgba(255,111,165,.10);transform:translateX(6px)}
-  .track .play{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(140deg,rgba(255,111,165,.3),rgba(160,107,255,.22));border:1px solid rgba(255,179,207,.4);font-size:.72rem}
-  .track b{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:#fff;display:block}
-  .track span{font-size:.76rem;color:var(--muted)}
-  .track.playing{border-color:rgba(255,179,207,.75);background:rgba(255,111,165,.16)}
+  /* moments timeline */
+  .moments{padding:2vh 6vw 5vh;max-width:680px;margin:0 auto;text-align:center}
+  .moments h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,5.4vw,2.5rem);margin-bottom:8px}
+  .moments h2 em{font-style:italic;color:var(--rose-soft)}
+  .moments .sub{color:var(--muted);font-size:.86rem;margin-bottom:30px;font-weight:300}
+  .timeline{position:relative;text-align:left;padding-left:28px}
+  .timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:1px;background:linear-gradient(180deg,var(--rose),var(--violet),transparent)}
+  .tl-item{position:relative;padding:0 0 26px 14px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-dot{position:absolute;left:-26px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 4px rgba(255,111,165,.16)}
+  .tl-item b{display:block;font-family:var(--serif);font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:4px}
+  .tl-item span{font-size:.9rem;color:var(--muted);font-weight:300}
   /* fight meter */
   .meter{padding:2vh 6vw 5vh;max-width:600px;margin:0 auto;text-align:center}
   .meter h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,5vw,2.3rem);margin-bottom:8px}
@@ -282,16 +284,15 @@
     <p class="meter-txt reveal" id="metertxt">Hisab lagaya ja raha hai...</p>
   </section>
 
-  <section class="playlist">
-    <h2 class="reveal">Bhai wali playlist</h2>
-    <p class="sub reveal">Ye gaane sunte ho to yaad aata hai tu</p>
-    <div class="reveal">
-      <div class="track" data-song="1"><span class="play">&#9654;</span><div><b>Yaaron Dosti</b><span>wo purane din</span></div></div>
-      <div class="track" data-song="2"><span class="play">&#9654;</span><div><b>Tera Yaar Hoon Main</b><span>seedha dil se</span></div></div>
-      <div class="track" data-song="3"><span class="play">&#9654;</span><div><b>Kabira</b><span>raat ki baatein</span></div></div>
-      <div class="track" data-song="4"><span class="play">&#9654;</span><div><b>Bhai Bhai</b><span>hum dono ka anthem</span></div></div>
+  <section class="moments">
+    <h2 class="reveal">Yaadon wala safar</h2>
+    <p class="sub reveal">Ye sab humne saath kiya hai</p>
+    <div class="timeline reveal">
+      <div class="tl-item"><span class="tl-dot"></span><b>Pehli mulaqat</b><span>Jab pata nahi tha ke ye dosti itni door tak jayegi.</span></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>Wo raat wali baatein</b><span>Jab subah hone ka pata hi nahi chalta tha.</span></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>Wo jhagda</b><span>Chhoti si baat, badi si khamoshi. Par hum ruk nahi paye.</span></div>
+      <div class="tl-item"><span class="tl-dot"></span><b>Wapas aa jana</b><span>Ab bas itna hai — ek baar baat kar lo.</span></div>
     </div>
-    <p class="meter-txt reveal" id="songmsg" style="margin-top:22px"></p>
   </section>
 
   <section class="roast">
@@ -425,20 +426,6 @@
     }, {threshold:.4});
     mo.observe(mf.parentElement.parentElement);
   }
-
-  /* playlist */
-  var songMsgs = {
-    '1': 'Yaad hai wo din? Kuch nahi badla bhai.',
-    '2': 'Haan, main tera yaar hoon — bas.'
-  };
-  document.querySelectorAll('.track').forEach(function(t){
-    t.addEventListener('click', function(){
-      document.querySelectorAll('.track').forEach(function(x){ x.classList.remove('playing'); });
-      t.classList.add('playing');
-      var sm = document.getElementById('songmsg');
-      sm.textContent = songMsgs[t.dataset.song] || 'Ye gaana sunte hi tera chehra yaad aata hai.';
-    });
-  });
 
   /* roast */
   var roasts = [
