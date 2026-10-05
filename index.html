@@ -104,6 +104,45 @@
   @keyframes pop{0%{opacity:1;transform:translateY(0) scale(.6) rotate(0)}100%{opacity:0;transform:translateY(-90px) scale(1.5) rotate(24deg)}}
   .final-msg{min-height:34px;margin-top:18px;font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,3.4vw,1.35rem);color:var(--rose-soft);transition:opacity .4s}
   .heart-hint{display:block;margin-top:10px;font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted)}
+  /* ---------- bro extras ---------- */
+  .badge-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+  .badge{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;padding:8px 15px;border-radius:100px;border:1px solid rgba(255,179,207,.35);background:rgba(255,255,255,.04);color:#e6dcef}
+  .legend{padding:2vh 6vw 6vh;max-width:900px;margin:0 auto;text-align:center}
+  .legend h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,5.6vw,2.7rem);margin-bottom:12px}
+  .legend h2 em{font-style:italic;color:var(--rose-soft)}
+  .legend .sub{color:var(--muted);font-size:.9rem;margin-bottom:36px;font-weight:300}
+  .pacts{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));text-align:left}
+  .pact{display:flex;gap:14px;align-items:flex-start;padding:20px 20px;border-radius:16px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(12px);transition:.45s cubic-bezier(.2,.8,.2,1)}
+  .pact:hover{transform:translateY(-6px);border-color:rgba(255,179,207,.42);box-shadow:0 24px 50px -30px rgba(255,79,139,.85)}
+  .pact .tick{flex:0 0 30px;height:30px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(140deg,rgba(255,111,165,.28),rgba(160,107,255,.2));border:1px solid rgba(255,179,207,.4);font-size:.8rem}
+  .pact b{display:block;font-family:var(--serif);font-size:1.12rem;font-weight:600;color:#fff;margin-bottom:4px}
+  .pact span{font-size:.9rem;color:var(--muted);font-weight:300}
+  .counters{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px}
+  .counter{min-width:130px;padding:16px 18px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.035)}
+  .counter b{display:block;font-family:var(--serif);font-size:1.7rem;color:var(--rose-soft);line-height:1}
+  .counter span{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  .mood{padding:2vh 6vw 5vh;max-width:860px;margin:0 auto;text-align:center}
+  .mood h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,5.2vw,2.5rem);margin-bottom:8px}
+  .mood .sub{color:var(--muted);font-size:.88rem;margin-bottom:28px;font-weight:300}
+  .mood-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .mood-btn{padding:13px 22px;border-radius:100px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#e6dcef;font-family:var(--sans);font-size:.88rem;cursor:pointer;transition:.35s cubic-bezier(.2,.8,.2,1)}
+  .mood-btn:hover,.mood-btn.on{border-color:rgba(255,179,207,.6);background:rgba(255,111,165,.14);color:#fff;transform:translateY(-3px)}
+  .mood-out{margin-top:26px;min-height:60px;font-family:var(--serif);font-size:clamp(1.05rem,3.4vw,1.35rem);font-style:italic;color:#fff;opacity:0;transition:opacity .5s}
+  .mood-out.on{opacity:1}
+  .envelope-wrap{padding:2vh 6vw 6vh;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .envelope{width:min(430px,90vw);padding:34px 26px;border-radius:20px;border:1px dashed rgba(255,179,207,.45);background:linear-gradient(165deg,rgba(255,111,165,.10),rgba(160,107,255,.07));cursor:pointer;transition:.5s cubic-bezier(.2,.8,.2,1)}
+  .envelope:hover{transform:translateY(-6px);border-color:rgba(255,179,207,.75);box-shadow:0 30px 60px -34px rgba(255,79,139,.9)}
+  .envelope .seal2{font-size:2rem;display:block;margin-bottom:10px}
+  .envelope b{display:block;font-family:var(--serif);font-size:1.25rem;color:#fff;margin-bottom:6px}
+  .envelope span{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  .note{margin-top:24px;max-width:520px;font-family:var(--serif);font-style:italic;font-size:clamp(1.02rem,3.3vw,1.28rem);color:var(--rose-soft);opacity:0;transform:translateY(14px);transition:.7s cubic-bezier(.2,.8,.2,1)}
+  .note.on{opacity:1;transform:none}
+  .vip{padding:3vh 6vw 6vh;text-align:center}
+  .vip .ring{display:inline-flex;align-items:center;gap:12px;padding:12px 24px;border-radius:100px;border:1px solid rgba(240,201,122,.45);background:rgba(240,201,122,.07);color:var(--gold);font-size:.64rem;letter-spacing:.32em;text-transform:uppercase}
+  .vip h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,5.6vw,2.7rem);margin:22px 0 10px}
+  .vip h2 em{font-style:italic;color:var(--rose-soft)}
+  .vip p{color:var(--muted);font-size:.92rem;font-weight:300;max-width:44ch;margin:0 auto}
+  .vip .bro-line{margin-top:26px;font-family:var(--script);font-size:clamp(1.8rem,6vw,2.6rem);background:linear-gradient(100deg,#fff,var(--rose-soft) 45%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
   @media (max-width:600px){
     .hero{min-height:auto;justify-content:flex-start;padding:30px 6vw 14px}
     .crest{margin-bottom:30px}
@@ -201,6 +240,59 @@
     </div>
   </section>
 
+  <section class="legend">
+    <h2 class="reveal">Ye <em>wada</em> hai, bhai</h2>
+    <p class="sub reveal">Lafz kam, niyat saaf. Ye sab pakka.</p>
+    <div class="pacts reveal">
+      <div class="pact"><span class="tick">&#10003;</span><div><b>No more zid</b><span>Jo galat ho, main pehle maanunga. Ego se bara hum hai.</span></div></div>
+      <div class="pact"><span class="tick">&#10003;</span><div><b>Seedhi baat</b><span>Na drama, na chhupana. Jo dil mein hai, wahi bolunga.</span></div></div>
+      <div class="pact"><span class="tick">&#10003;</span><div><b>Tera naam aage</b><span>Jahan zaroorat ho, main pehle tera naam lunga.</span></div></div>
+      <div class="pact"><span class="tick">&#10003;</span><div><b>Hamesha pick up</b><span>Raat ho ya subah, tu call kare to main uthunga.</span></div></div>
+    </div>
+    <div class="counters reveal">
+      <div class="counter"><b id="c1">0</b><span>din dost</span></div>
+      <div class="counter"><b id="c2">0</b><span>lafz maafi</span></div>
+      <div class="counter"><b id="c3">&#8734;</b><span>izzat</span></div>
+    </div>
+  </section>
+
+  <section class="mood">
+    <h2 class="reveal">Aaj mood kaisa hai?</h2>
+    <p class="sub reveal">Tap karo, main jawab de dunga.</p>
+    <div class="mood-btns reveal">
+      <button class="mood-btn" data-mood="gussa">Gussa</button>
+      <button class="mood-btn" data-mood="udaas">Udaas</button>
+      <button class="mood-btn" data-mood="theek">Theek</button>
+      <button class="mood-btn" data-mood="bekar">Bekar</button>
+      <button class="mood-btn" data-mood="khush">Khush</button>
+    </div>
+    <p class="mood-out" id="moodout"></p>
+  </section>
+
+  <section class="envelope-wrap">
+    <div class="envelope reveal" id="env">
+      <span class="seal2">&#9993;&#65039;</span>
+      <b>Ek chhita note</b>
+      <span>tap karke kholo</span>
+    </div>
+    <p class="note" id="note">Bhai, tu sirf dost nahi, tu mera sukoon hai. Jab sab thak jate hai, tu wahi hota hai jo kandha deta hai. Ye note hamesha yahin rahega — jab bhi dil bhaari ho, khol lena.</p>
+  </section>
+
+  <section class="vip">
+    <div class="reveal">
+      <span class="ring">&#9733; vip zone &#9733;</span>
+      <h2>Aakhri baat, <em>bande</em></h2>
+      <p>Aakhri baat ye ke tu sirf mera dost nahi, tu mera <b>right hand</b> hai. Jo hum dono ne milke jhela hai, wo kisi ko samajh nahi aayega. Aur ye dosti khatam karne ka option mere pass nahi hai.</p>
+      <div class="bro-line">Bhai Forever</div>
+      <div class="badge-row">
+        <span class="badge">Top Tier Dost</span>
+        <span class="badge">Lifetime Warranty</span>
+        <span class="badge">No Drama Zone</span>
+        <span class="badge">VIP Since Day One</span>
+      </div>
+    </div>
+  </section>
+
   <section class="finale">
     <div class="reveal">
       <span class="heart" id="bigheart" aria-hidden="true">&#128155;</span>
@@ -249,6 +341,56 @@
     fm.style.opacity = 0;
     setTimeout(function(){ fm.textContent = msgs[mi % msgs.length]; mi++; fm.style.opacity = 1; }, 250);
   });
+
+  /* counters */
+  function runCounters(){
+    var c1 = document.getElementById('c1'), c2 = document.getElementById('c2');
+    if (!c1 || c1.dataset.done) return;
+    c1.dataset.done = 1;
+    var t1 = 2000, t2 = 2, s1 = Date.now(), s2 = Date.now();
+    (function up1(){
+      var p = Math.min((Date.now()-s1)/1600, 1);
+      c1.textContent = Math.floor(2000 * (1-Math.pow(1-p,3))).toLocaleString();
+      if (p < 1) requestAnimationFrame(up1);
+    })();
+    (function up2(){
+      var p = Math.min((Date.now()-s2)/1200, 1);
+      c2.textContent = Math.floor(9 * (1-Math.pow(1-p,3)));
+      if (p < 1) requestAnimationFrame(up2);
+    })();
+  }
+
+  /* mood buttons */
+  var moods = {
+    gussa: 'Gussa hai? Bilkul haq hai tera. Main sun raha hon, kuch mat chhupa.',
+    udaas: 'Udaas hai to bata. Main yahin hon, kuch der baat kar le mujhse.',
+    theek: 'Theek hai to sab theek. Bas theek hi mat rehna, khush bhi rehna.',
+    bekar: 'Bekar din tha? Aaj ka hissa bhool ja, kal naya din hai bhai.',
+    khush: 'Khush hai to meri bhi khushi ho gayi. Aise hi muskurata reh.'
+  };
+  var moodOut = document.getElementById('moodout');
+  document.querySelectorAll('.mood-btn').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.mood-btn').forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+      moodOut.textContent = moods[b.dataset.mood] || '';
+      moodOut.classList.add('on');
+    });
+  });
+
+  /* envelope */
+  document.getElementById('env').addEventListener('click', function(){
+    document.getElementById('note').classList.toggle('on');
+  });
+
+  /* counters trigger */
+  var legendEl = document.querySelector('.legend');
+  if (legendEl && 'IntersectionObserver' in window){
+    var io2 = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ runCounters(); io2.disconnect(); } });
+    }, {threshold:.3});
+    io2.observe(legendEl);
+  } else { runCounters(); }
 
   var petalBox = document.getElementById('petals');
   var glyphs = ['\uD83E\uDD0D','\u2728','\uD83C\uDF38','\uD83D\uDC9B','\uD83E\uDD0D'];
